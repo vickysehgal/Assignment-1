@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- A retail store needs to calculate the total cost of items in a customer's
+    cart. A customer cart is an array of objects with unit price and quantity.
+    Implement an arrow function to calculate the total cost of items, based on
+    the unit price and quantity of each item. -->
+
+    <script>
+      const calculateTotalCost = (cartItems) => {
+        let totalCost = 0;
+        for (let item of cartItems) {
+          totalCost += item.unitPrice * item.quantity;
+        }
+        return totalCost;
+      };
+
+      const cart = [
+        { unitPrice: 100, quantity: 2 },
+        { unitPrice: 50, quantity: 3 },
+        { unitPrice: 20, quantity: 7 },
+      ];
+
+      const totalCost = calculateTotalCost(cart);
+      console.log(totalCost);  // output 490
+    </script>
+  </body>
+</html>

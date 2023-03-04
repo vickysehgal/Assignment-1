@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- You are working on an e-commerce website where customers can add items to their cart. The cart stores the
+    quantity of each item that the customer wants to purchase in an array of numbers. However, the website is
+    currently experiencing a bug where the euantity of each item is being recorded incorrectly by reducing it to
+    half. As a result, you need to write a JavaScript function that can double the euantity of each item in the cart
+    array to correct thq bug. -->
+
+    <script>
+      function fixCartQuantities(cart) {
+        for (let i = 0; i < cart.length; i++) {
+          cart[i] *= 2;
+        }
+        return cart;
+      }
+
+      const cartQuantity = [1, 2, 3, 4, 5];
+
+      const fixedCart = fixCartQuantities(cartQuantity);
+      console.log(fixedCart);
+
+    </script>
+  </body>
+</html>

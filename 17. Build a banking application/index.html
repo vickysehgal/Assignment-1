@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- A banking application needs to manage customer accounts and transactions.
+    The user detail is stored in an object with a keys name and balance. Write
+    functions using object methods to update a customer's account balance based
+    on a deposit or withdrawal. -->
+
+    <script>
+
+      // Defining a customer object with name and balance properties
+      const customer = {
+        name: "Alice",
+        balance: 1000,
+      };
+
+      // Defining methods to update the customer's balance
+      const deposit = function (amount) {
+        this.balance += amount;
+        console.log(`Deposited ${amount}. New balance is ${this.balance}.`);
+      };
+
+      const withdraw = function (amount) {
+        if (this.balance < amount) {
+          console.log("Insufficient funds.");
+        } else {
+          this.balance -= amount;
+          console.log(`Withdrew ${amount}. New balance is ${this.balance}.`);
+        }
+      };
+
+      // Example usage
+      console.log(
+        `Current balance for ${customer.name} is ${customer.balance}.`
+      );
+      deposit.call(customer, 500);
+      withdraw.call(customer, 200);
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-eeuiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Write a program that takes an integer input i and prints an inverted
+    right-angled triangle pattern of asterisks with i rows. Inverted
+    right-angled pattern: -->
+
+    <script>
+      //   for (let row = 0; row < 6; row++) {
+      //     let bag = "";
+      //     for (let column = 6; column > row; column--) {
+      //       bag += "*";
+      //     }
+      //     console.log(bag);
+      //   }
+
+      const i = parseInt(prompt("Enter the number of rows: "));
+
+      for (let row = i; row >= 1; row--) {
+        let pattern = "";
+
+        for (let col = 1; col <= row; col++) {
+          pattern += "*";
+        }
+
+        console.log(pattern);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 4px;
+        width: 0%;
+        background-color: #007bff;
+        z-index: 9999;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Create a progress bar that fills up as the user scrolls down the page. -->
+
+    <div id="progress-bar"></div>
+
+    <div style="height: 300vh"></div>
+
+    <script>
+      // Get the height of the document
+      const docHeight = document.documentElement.scrollHeight;
+
+      // Get the height of the viewport
+      const windowHeight = window.innerHeight;
+
+      // Calculate the scroll distance required to fill up the progress bar
+      const scrollDistance = docHeight - windowHeight;
+
+      // Get a reference to the progress bar element
+      const progressBar = document.getElementById("progress-bar");
+
+      // Add an event listener to the window object to listen for scroll events
+      window.addEventListener("scroll", function () {
+        // Get the current scroll position
+        const scrollPosition = window.scrollY;
+
+        // Calculate the percentage of the page that has been scrolled
+        const scrollPercentage = (scrollPosition / scrollDistance) * 100;
+
+        // Set the width of the progress bar
+        progressBar.style.width = `${scrollPercentage}%`;
+      });
+    </script>
+  </body>
+</html>

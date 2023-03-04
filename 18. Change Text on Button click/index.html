@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Create a simple HTML page with a heading and a button. The initial text must
+    be “The most affordable learning platform”, use JavaScript to change the
+    heading text to “PW Skills” when the button is clicked. The button must
+    toggle the text of a heading between "The most affordable learning platform"
+    and "PW Skills" on each click. -->
+
+    <h1 id="heading">The most affordable learning platform</h1>
+
+    <button onclick="toggleHeading()">Toggle Text</button>
+
+    <script>
+      function toggleHeading() {
+        let heading = document.getElementById("heading");
+        if (heading.innerHTML === "The most affordable learning platform") {
+          heading.innerHTML = "PW Skills";
+        } else {
+          heading.innerHTML = "The most affordable learning platform";
+        }
+      }
+    </script>
+  </body>
+</html>

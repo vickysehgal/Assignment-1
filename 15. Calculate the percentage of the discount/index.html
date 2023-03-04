@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- A retail store is offering a discount on its products and wants to calculate
+    the percentage of the discount to show customers how much they can save.
+    Given the original price and the discounted price of a product, implement an
+    arrow function to calculate the percentage of the discount rounded off to
+    two decimal places. This function could be useful for the store's marketing
+    team to create promotions and offers that attract customers. -->
+
+    <!-- In this example, the product is discounted by 40%, which is calculated as  follows: 
+    Original price = 50 
+    Discounted price = 30 
+    Discount = 50 - 30 = 20
+    Discount percentage = (20 / 50) * 100 = 40% -->
+
+    <script>
+      const calculateDiscountPercentage = (originalPrice, discountedPrice) => {
+        const discount = originalPrice - discountedPrice;
+        const discountPercentage = (discount / originalPrice) * 100;
+        return Math.round(discountPercentage * 100) / 100; // round off to two decimal places
+      };
+
+      const originalPrice = 50;
+      const discountedPrice = 30;
+      const discountPercentage = calculateDiscountPercentage(
+        originalPrice,
+        discountedPrice
+      );
+      console.log(`The product is discounted by ${discountPercentage}%`);
+      // Output: The product discount is 40%
+    </script>
+  </body>
+</html>

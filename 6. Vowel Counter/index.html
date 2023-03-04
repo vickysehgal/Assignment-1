@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- We want to count the number of vowels in a person's name. Given a name as
+    input, the program should iterate through each character in the name, and
+    check if it is a vowel or not. If the character is a vowel, it should be
+    countedK -->
+
+    <script>
+      function countVowels(name) {
+        const vowels = ["a", "e", "i", "o", "u"];
+        let vowelCount = 0;
+
+        for (let i = 0; i < name.length; i++) {
+          const char = name[i].toLowerCase();
+          if (vowels.includes(char)) {
+            vowelCount++;
+          }
+        }
+
+        return vowelCount;
+      }
+
+      console.log(countVowels("Aeroplane"));
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Write a program that takes an array of numbers and prints all the numbers
+    that are divisible by 3, but not by 2. Use a for loop and continue
+    statement. -->
+
+    <script>
+      let arr = [3, 5, 9, 12, 15, 18, 20, 21, 24, 27, 30];
+
+      for (let i = 0; i < arr.length; i++) {
+        let num = arr[i];
+
+        if (num % 3 === 0 && num % 2 == 0) {      
+          continue; 
+        }else if(num % 3 === 0 && num % 2 !== 0){
+            console.log(num);
+        }
+      }
+
+      
+    //   here we can also solve this question using only if condition
+    //   else if(num % 3 === 0 && num % 2 !== 0){
+    //     console.log(num);
+    //     }
+
+    </script>
+  </body>
+</html>
