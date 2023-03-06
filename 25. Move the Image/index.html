@@ -15,44 +15,41 @@
     including up, down, left, and right, in a smooth and responsive manner. Have
     a look at the event key codes before starting the project. -->
 
-    <img
+     <img
+      id="image"
       src="./star-war.jpg"
-      id="myImage"
       style="position: absolute; top: 50px; left: 50px"
       width="200"
       height="200"
     />
 
-    <!-- js section -->
-
     <script>
-      let image = document.getElementById("myImage");
-      let positionX = 50;
-      let positionY = 50;
+      const image = document.getElementById("image");
 
-      function moveImage(e) {
-        switch (e.keyCode) {
-          case 37: // left arrow
-            positionX -= 10;
+      // Set the initial position of the image
+      let x = 0;
+      let y = 0;
+
+      // Add an event listener to the document to detect arrow key presses
+      document.addEventListener("keydown", (event) => {
+        switch (event.key) {
+          case "ArrowUp":       // Move the image up          
+            y -= 10;
             break;
-          case 38: // up arrow
-            positionY -= 10;
+          case "ArrowDown":      // Move the image down 
+            y += 10;
             break;
-          case 39: // right arrow
-            positionX += 10;
+          case "ArrowLeft":     // Move the image left
+            x -= 10;
             break;
-          case 40: // down arrow
-            positionY += 10;
+          case "ArrowRight":    // Move the image right          
+            x += 10;
             break;
-          default:
-            return;
         }
 
-        image.style.left = positionX + "px";
-        image.style.top = positionY + "px";
-      }
-
-      document.addEventListener("keydown", moveImage);
+        // Update the position of the image using css transform property
+        image.style.transform = `translate(${x}px, ${y}px)`;
+      });
     </script>
   </body>
 </html>
